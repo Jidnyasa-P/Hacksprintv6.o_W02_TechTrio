@@ -1,43 +1,1454 @@
-[
-    {
-      "id": 1,
-      "name": "Paws & Walks",
-      "service": "Dog Walking",
-      "location": "Pune",
-      "rating": 4.8,
-      "pricePerHour": 200,
-      "contact": "9876543210",
-      "available": true
-    },
-    {
-      "id": 2,
-      "name": "Fur Style Studio",
-      "service": "Grooming",
-      "location": "Mumbai",
-      "rating": 4.5,
-      "pricePerSession": 500,
-      "contact": "9876501234",
-      "available": true
-    },
-    {
-      "id": 3,
-      "name": "Bark & Board",
-      "service": "Boarding",
-      "location": "Bangalore",
-      "rating": 4.7,
-      "pricePerDay": 800,
-      "contact": "9823456789",
-      "available": false
-    },
-    {
-      "id": 4,
-      "name": "Happy Tails",
-      "service": "Dog Walking",
-      "location": "Delhi",
-      "rating": 4.6,
-      "pricePerHour": 150,
-      "contact": "9812312345",
-      "available": true
-    }
-  ]
-  
+{
+  "Dog Walking": {
+    "Daily Dog Walks": [
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.0,
+        "contact": "+1-438-702-3597",
+        "payment": "$74"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.9,
+        "contact": "+1-712-462-3930",
+        "payment": "$75"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.7,
+        "contact": "+1-592-871-8663",
+        "payment": "$84"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.7,
+        "contact": "+1-788-484-4037",
+        "payment": "$70"
+      }
+    ],
+    "Weekend Walk Plans": [
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.7,
+        "contact": "+1-797-583-9557",
+        "payment": "$82"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.7,
+        "contact": "+1-263-580-4955",
+        "payment": "$53"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.0,
+        "contact": "+1-564-101-9852",
+        "payment": "$41"
+      },
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.7,
+        "contact": "+1-800-111-9409",
+        "payment": "$56"
+      }
+    ],
+    "Puppy Walks": [
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-332-622-2614",
+        "payment": "$66"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.6,
+        "contact": "+1-247-709-2211",
+        "payment": "$29"
+      },
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.7,
+        "contact": "+1-518-678-9268",
+        "payment": "$68"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.9,
+        "contact": "+1-661-583-9368",
+        "payment": "$73"
+      }
+    ],
+    "Senior Dog Walks": [
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.3,
+        "contact": "+1-384-975-4348",
+        "payment": "$88"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.1,
+        "contact": "+1-518-542-5560",
+        "payment": "$48"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.6,
+        "contact": "+1-405-967-3157",
+        "payment": "$77"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.1,
+        "contact": "+1-205-666-8560",
+        "payment": "$92"
+      }
+    ],
+    "Adventure Walks": [
+      {
+        "name": "Harper Chase",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 3.8,
+        "contact": "+1-996-396-5538",
+        "payment": "$23"
+      },
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.5,
+        "contact": "+1-477-390-3685",
+        "payment": "$50"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.7,
+        "contact": "+1-645-464-6128",
+        "payment": "$33"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 5.0,
+        "contact": "+1-314-859-9591",
+        "payment": "$41"
+      }
+    ],
+    "Group Walks": [
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.8,
+        "contact": "+1-387-123-8296",
+        "payment": "$25"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.5,
+        "contact": "+1-226-532-1064",
+        "payment": "$94"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.8,
+        "contact": "+1-742-594-3855",
+        "payment": "$38"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.4,
+        "contact": "+1-693-936-5187",
+        "payment": "$48"
+      }
+    ],
+    "Late-Night Walks": [
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-608-183-3658",
+        "payment": "$35"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.5,
+        "contact": "+1-339-425-8450",
+        "payment": "$69"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.5,
+        "contact": "+1-948-123-5138",
+        "payment": "$95"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.7,
+        "contact": "+1-938-228-5981",
+        "payment": "$50"
+      }
+    ],
+    "Custom Walk Plans": [
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 5.0,
+        "contact": "+1-344-471-7516",
+        "payment": "$25"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.6,
+        "contact": "+1-826-137-7479",
+        "payment": "$33"
+      },
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.0,
+        "contact": "+1-817-525-3543",
+        "payment": "$38"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 3.6,
+        "contact": "+1-236-896-1235",
+        "payment": "$54"
+      }
+    ]
+  },
+  "Pet Training": {
+    "Puppy Basics": [
+      {
+        "name": "Harper Chase",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.5,
+        "contact": "+1-393-484-3161",
+        "payment": "$22"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.3,
+        "contact": "+1-215-405-9668",
+        "payment": "$55"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.0,
+        "contact": "+1-627-307-6731",
+        "payment": "$81"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.9,
+        "contact": "+1-384-373-4740",
+        "payment": "$40"
+      }
+    ],
+    "Obedience Training": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.8,
+        "contact": "+1-414-924-5181",
+        "payment": "$79"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.9,
+        "contact": "+1-269-345-1464",
+        "payment": "$83"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 5.0,
+        "contact": "+1-888-701-6747",
+        "payment": "$81"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.7,
+        "contact": "+1-270-789-9722",
+        "payment": "$89"
+      }
+    ],
+    "Leash Training": [
+      {
+        "name": "Harper Chase",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.7,
+        "contact": "+1-846-728-2757",
+        "payment": "$68"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.4,
+        "contact": "+1-544-133-1899",
+        "payment": "$98"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.6,
+        "contact": "+1-272-466-3843",
+        "payment": "$31"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.9,
+        "contact": "+1-534-862-4157",
+        "payment": "$45"
+      }
+    ],
+    "Potty Training": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.5,
+        "contact": "+1-886-221-5283",
+        "payment": "$44"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.9,
+        "contact": "+1-988-155-9930",
+        "payment": "$98"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.9,
+        "contact": "+1-993-958-4920",
+        "payment": "$72"
+      },
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.6,
+        "contact": "+1-267-704-5716",
+        "payment": "$43"
+      }
+    ],
+    "Behaviour Correction": [
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.8,
+        "contact": "+1-432-108-5250",
+        "payment": "$49"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.9,
+        "contact": "+1-877-351-9155",
+        "payment": "$24"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-475-506-9543",
+        "payment": "$69"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.8,
+        "contact": "+1-982-872-2721",
+        "payment": "$49"
+      }
+    ],
+    "Socialization Sessions": [
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.4,
+        "contact": "+1-297-739-5835",
+        "payment": "$100"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.8,
+        "contact": "+1-854-641-9986",
+        "payment": "$63"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.7,
+        "contact": "+1-971-396-6428",
+        "payment": "$73"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.9,
+        "contact": "+1-251-890-7977",
+        "payment": "$40"
+      }
+    ],
+    "Advanced Commands": [
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 3.5,
+        "contact": "+1-292-418-4817",
+        "payment": "$58"
+      },
+      {
+        "name": "Finley Reid",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 5.0,
+        "contact": "+1-769-976-4007",
+        "payment": "$91"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.9,
+        "contact": "+1-993-612-8417",
+        "payment": "$94"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.9,
+        "contact": "+1-316-341-9664",
+        "payment": "$60"
+      }
+    ],
+    "Custom Training Plans": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.7,
+        "contact": "+1-571-884-7161",
+        "payment": "$71"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.7,
+        "contact": "+1-896-838-6353",
+        "payment": "$80"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.7,
+        "contact": "+1-322-138-2648",
+        "payment": "$88"
+      },
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.0,
+        "contact": "+1-627-430-2523",
+        "payment": "$46"
+      }
+    ]
+  },
+  "Grooming": {
+    "Full Grooming": [
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-862-956-1790",
+        "payment": "$25"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.0,
+        "contact": "+1-983-460-1234",
+        "payment": "$57"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 5.0,
+        "contact": "+1-916-964-7136",
+        "payment": "$23"
+      },
+      {
+        "name": "Finley Reid",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.7,
+        "contact": "+1-227-341-3583",
+        "payment": "$62"
+      }
+    ],
+    "Paw Spa": [
+      {
+        "name": "Finley Reid",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.2,
+        "contact": "+1-543-894-9887",
+        "payment": "$65"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.8,
+        "contact": "+1-252-564-4859",
+        "payment": "$54"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.7,
+        "contact": "+1-534-586-7388",
+        "payment": "$45"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.1,
+        "contact": "+1-207-737-8785",
+        "payment": "$80"
+      }
+    ],
+    "Bath & Brush": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.3,
+        "contact": "+1-699-966-1503",
+        "payment": "$43"
+      },
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.9,
+        "contact": "+1-528-946-6061",
+        "payment": "$33"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.6,
+        "contact": "+1-716-356-4647",
+        "payment": "$72"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.6,
+        "contact": "+1-563-752-3485",
+        "payment": "$83"
+      }
+    ],
+    "Nail Trimming": [
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.8,
+        "contact": "+1-827-966-6465",
+        "payment": "$60"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.3,
+        "contact": "+1-312-596-9224",
+        "payment": "$44"
+      },
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-620-301-2180",
+        "payment": "$26"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.5,
+        "contact": "+1-412-837-3693",
+        "payment": "$60"
+      }
+    ],
+    "Ear Cleaning": [
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.1,
+        "contact": "+1-292-684-9786",
+        "payment": "$44"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-293-693-6239",
+        "payment": "$20"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.2,
+        "contact": "+1-768-309-2164",
+        "payment": "$33"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.9,
+        "contact": "+1-834-405-9673",
+        "payment": "$80"
+      }
+    ],
+    "De-shedding Treatment": [
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.6,
+        "contact": "+1-214-252-6337",
+        "payment": "$32"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.1,
+        "contact": "+1-505-104-4244",
+        "payment": "$29"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.5,
+        "contact": "+1-922-231-4693",
+        "payment": "$46"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.0,
+        "contact": "+1-653-349-6318",
+        "payment": "$24"
+      }
+    ],
+    "Teeth Brushing": [
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.8,
+        "contact": "+1-276-155-5530",
+        "payment": "$62"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.4,
+        "contact": "+1-251-720-5807",
+        "payment": "$27"
+      },
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.2,
+        "contact": "+1-750-430-6552",
+        "payment": "$64"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.5,
+        "contact": "+1-270-772-4078",
+        "payment": "$95"
+      }
+    ],
+    "Paw & Pad Care": [
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.5,
+        "contact": "+1-740-422-8613",
+        "payment": "$29"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.9,
+        "contact": "+1-605-291-7974",
+        "payment": "$62"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.3,
+        "contact": "+1-972-962-9737",
+        "payment": "$61"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-891-105-3618",
+        "payment": "$27"
+      }
+    ]
+  },
+  "Pet Boarding": {
+    "Overnight Pet Boarding": [
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.6,
+        "contact": "+1-876-402-4159",
+        "payment": "$35"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.6,
+        "contact": "+1-502-171-5196",
+        "payment": "$58"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.5,
+        "contact": "+1-229-575-4483",
+        "payment": "$35"
+      },
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.9,
+        "contact": "+1-206-146-6047",
+        "payment": "$96"
+      }
+    ],
+    "Holiday Boarding": [
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.2,
+        "contact": "+1-738-904-6969",
+        "payment": "$48"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.9,
+        "contact": "+1-708-115-8358",
+        "payment": "$29"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.8,
+        "contact": "+1-655-540-3839",
+        "payment": "$65"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.1,
+        "contact": "+1-940-545-3786",
+        "payment": "$37"
+      }
+    ],
+    "Weekend Stays": [
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.4,
+        "contact": "+1-375-639-4030",
+        "payment": "$74"
+      },
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.5,
+        "contact": "+1-875-158-1564",
+        "payment": "$59"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.9,
+        "contact": "+1-662-121-8916",
+        "payment": "$35"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.6,
+        "contact": "+1-913-537-3826",
+        "payment": "$84"
+      }
+    ],
+    "Long-Term Boarding": [
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.1,
+        "contact": "+1-417-657-7002",
+        "payment": "$22"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.7,
+        "contact": "+1-239-948-8405",
+        "payment": "$53"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.8,
+        "contact": "+1-404-752-6363",
+        "payment": "$73"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.6,
+        "contact": "+1-607-186-7056",
+        "payment": "$38"
+      }
+    ],
+    "Private Suite Boarding": [
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.4,
+        "contact": "+1-843-276-2853",
+        "payment": "$96"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.9,
+        "contact": "+1-785-741-1124",
+        "payment": "$57"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.9,
+        "contact": "+1-651-180-5221",
+        "payment": "$57"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 3.6,
+        "contact": "+1-572-301-7666",
+        "payment": "$97"
+      }
+    ],
+    "Play & Stay": [
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-592-853-9500",
+        "payment": "$70"
+      },
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 5.0,
+        "contact": "+1-975-395-1280",
+        "payment": "$49"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.7,
+        "contact": "+1-331-324-1840",
+        "payment": "$40"
+      },
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.7,
+        "contact": "+1-667-595-6827",
+        "payment": "$94"
+      }
+    ],
+    "Boarding with Daily Walks": [
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.6,
+        "contact": "+1-600-572-8680",
+        "payment": "$49"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.8,
+        "contact": "+1-937-344-8441",
+        "payment": "$41"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-822-123-5449",
+        "payment": "$20"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.6,
+        "contact": "+1-243-141-6315",
+        "payment": "$80"
+      }
+    ],
+    "Home-Style Boarding": [
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.2,
+        "contact": "+1-340-670-8575",
+        "payment": "$76"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.3,
+        "contact": "+1-416-159-5604",
+        "payment": "$63"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.9,
+        "contact": "+1-649-321-9882",
+        "payment": "$95"
+      },
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.3,
+        "contact": "+1-507-654-9811",
+        "payment": "$53"
+      }
+    ]
+  },
+  "Veterinary": {
+    "General Health Check-up": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.6,
+        "contact": "+1-572-188-9690",
+        "payment": "$43"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.3,
+        "contact": "+1-667-529-5150",
+        "payment": "$67"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.9,
+        "contact": "+1-462-752-4632",
+        "payment": "$30"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.8,
+        "contact": "+1-539-980-9439",
+        "payment": "$41"
+      }
+    ],
+    "Vaccinations": [
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.9,
+        "contact": "+1-637-686-3809",
+        "payment": "$21"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.1,
+        "contact": "+1-770-366-4589",
+        "payment": "$26"
+      },
+      {
+        "name": "Harper Chase",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.8,
+        "contact": "+1-565-693-2641",
+        "payment": "$91"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.9,
+        "contact": "+1-430-271-9279",
+        "payment": "$26"
+      }
+    ],
+    "Deworming & Parasite Control": [
+      {
+        "name": "Avery Quinn",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.6,
+        "contact": "+1-430-411-9266",
+        "payment": "$79"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.0,
+        "contact": "+1-862-308-6142",
+        "payment": "$23"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.0,
+        "contact": "+1-281-102-6261",
+        "payment": "$34"
+      },
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.4,
+        "contact": "+1-659-438-7156",
+        "payment": "$72"
+      }
+    ],
+    "Emergency Care": [
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.0,
+        "contact": "+1-858-185-8889",
+        "payment": "$33"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.6,
+        "contact": "+1-254-711-9639",
+        "payment": "$89"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-331-513-8958",
+        "payment": "$78"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.9,
+        "contact": "+1-622-839-3822",
+        "payment": "$21"
+      }
+    ],
+    "Diagnostic Testing": [
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.8,
+        "contact": "+1-937-314-7581",
+        "payment": "$24"
+      },
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.2,
+        "contact": "+1-619-655-6140",
+        "payment": "$77"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 4.4,
+        "contact": "+1-225-902-8923",
+        "payment": "$70"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.7,
+        "contact": "+1-445-600-6593",
+        "payment": "$49"
+      }
+    ],
+    "Spaying & Neutering": [
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.2,
+        "contact": "+1-308-455-7783",
+        "payment": "$100"
+      },
+      {
+        "name": "Finley Reid",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.7,
+        "contact": "+1-827-609-4868",
+        "payment": "$98"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.9,
+        "contact": "+1-722-962-6282",
+        "payment": "$74"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.3,
+        "contact": "+1-676-587-1834",
+        "payment": "$62"
+      }
+    ],
+    "Dental Care": [
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 3.5,
+        "contact": "+1-470-641-1921",
+        "payment": "$83"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.7,
+        "contact": "+1-672-411-5158",
+        "payment": "$93"
+      },
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.1,
+        "contact": "+1-202-557-8744",
+        "payment": "$60"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.7,
+        "contact": "+1-728-308-1471",
+        "payment": "$32"
+      }
+    ],
+    "Senior Pet Care": [
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.9,
+        "contact": "+1-517-789-2408",
+        "payment": "$64"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.8,
+        "contact": "+1-809-840-3983",
+        "payment": "$70"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.6,
+        "contact": "+1-625-263-1132",
+        "payment": "$94"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.6,
+        "contact": "+1-652-247-7539",
+        "payment": "$27"
+      }
+    ]
+  },
+  "Pet Sitting": {
+    "In-Home Pet Sitting": [
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.9,
+        "contact": "+1-291-898-4888",
+        "payment": "$59"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.8,
+        "contact": "+1-490-541-3344",
+        "payment": "$68"
+      },
+      {
+        "name": "Kendall Drew",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 3.8,
+        "contact": "+1-435-282-1470",
+        "payment": "$39"
+      },
+      {
+        "name": "Harper Chase",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.2,
+        "contact": "+1-517-894-6743",
+        "payment": "$28"
+      }
+    ],
+    "Drop-In Visits": [
+      {
+        "name": "Sawyer Quinn",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 3.5,
+        "contact": "+1-283-130-1932",
+        "payment": "$68"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.8,
+        "contact": "+1-979-138-5098",
+        "payment": "$69"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.1,
+        "contact": "+1-426-677-1980",
+        "payment": "$44"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.2,
+        "contact": "+1-972-877-5400",
+        "payment": "$61"
+      }
+    ],
+    "Overnight Sitting": [
+      {
+        "name": "Drew Parker",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 3.6,
+        "contact": "+1-702-246-7472",
+        "payment": "$95"
+      },
+      {
+        "name": "Emerson Tate",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 3.8,
+        "contact": "+1-723-698-4225",
+        "payment": "$40"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.3,
+        "contact": "+1-660-274-8091",
+        "payment": "$97"
+      },
+      {
+        "name": "Cameron Hale",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.9,
+        "contact": "+1-281-803-3895",
+        "payment": "$39"
+      }
+    ],
+    "Weekend Sitting": [
+      {
+        "name": "Skyler Lane",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.9,
+        "contact": "+1-268-244-4634",
+        "payment": "$96"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 5.0,
+        "contact": "+1-702-641-5580",
+        "payment": "$54"
+      },
+      {
+        "name": "Jesse Morgan",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 4.2,
+        "contact": "+1-551-445-5527",
+        "payment": "$31"
+      },
+      {
+        "name": "Morgan Blake",
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "rating": 3.8,
+        "contact": "+1-764-369-7674",
+        "payment": "$85"
+      }
+    ],
+    "Senior Pet Sitting": [
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 4.8,
+        "contact": "+1-604-829-8755",
+        "payment": "$87"
+      },
+      {
+        "name": "Jamie Lee",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.8,
+        "contact": "+1-693-203-5632",
+        "payment": "$89"
+      },
+      {
+        "name": "Rowan Blake",
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "rating": 4.6,
+        "contact": "+1-971-735-7634",
+        "payment": "$69"
+      },
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 5.0,
+        "contact": "+1-678-159-8620",
+        "payment": "$86"
+      }
+    ],
+    "Puppy Sitting": [
+      {
+        "name": "Finley Reid",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4.6,
+        "contact": "+1-499-958-7165",
+        "payment": "$42"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.7,
+        "contact": "+1-630-676-2739",
+        "payment": "$82"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.9,
+        "contact": "+1-612-778-5646",
+        "payment": "$66"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.2,
+        "contact": "+1-217-168-4977",
+        "payment": "$50"
+      }
+    ],
+    "Multiple Pet Care": [
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "rating": 4.0,
+        "contact": "+1-854-922-6081",
+        "payment": "$69"
+      },
+      {
+        "name": "Riley Stone",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.5,
+        "contact": "+1-384-465-9612",
+        "payment": "$54"
+      },
+      {
+        "name": "Jordan Rivers",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.5,
+        "contact": "+1-604-949-2225",
+        "payment": "$47"
+      },
+      {
+        "name": "Quinn Monroe",
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "rating": 3.5,
+        "contact": "+1-534-550-3061",
+        "payment": "$67"
+      }
+    ],
+    "Daily Updates": [
+      {
+        "name": "Reese Maddox",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.0,
+        "contact": "+1-483-159-1231",
+        "payment": "$26"
+      },
+      {
+        "name": "Casey Green",
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "rating": 4.7,
+        "contact": "+1-334-247-5646",
+        "payment": "$78"
+      },
+      {
+        "name": "Taylor Brooks",
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "rating": 4.8,
+        "contact": "+1-463-671-3088",
+        "payment": "$55"
+      },
+      {
+        "name": "Alex Morgan",
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 3.8,
+        "contact": "+1-975-557-1624",
+        "payment": "$43"
+      }
+    ]
+  }
+}
