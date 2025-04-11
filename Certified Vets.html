@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certified Vets</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --light-bg: #f0f8ff;
+      --card-bg: #ffffff;
+      --text: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: var(--light-bg); /* fallback color */
+      color: var(--text);
+      z-index: 0;
+      overflow-x: hidden;
+      cursor: url("images/cursor.cur"), auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/background.png") no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #357abd;
+    }
+
+    header img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transform: scale(1);
+    }
+
+    section:hover {
+      transform: scale(0.98);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background-color: #e3f2fd;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .cta a:hover {
+      background-color: #357abd;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 30px 15px;
+      }
+
+      .cta a {
+        width: 100%;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/vet.png" alt="Certified Vets Icon" />
+    <h1>Certified Vets</h1>
+    <p>Reliable Medical Support from Trusted Professionals</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>Why Choose Our Certified Vets?</h2>
+      <p>
+        Our certified veterinarians are experienced, compassionate, and dedicated to your pet’s health. Whether it’s a routine check-up, vaccination, or urgent care, your furry friend is in safe hands with our licensed veterinary experts.
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li><strong>On-Site & Home Visits:</strong> Flexible care wherever your pet feels most comfortable.</li>
+        <li><strong>Comprehensive Exams:</strong> Physical assessments, lab tests, and diagnostics included.</li>
+        <li><strong>Vaccinations & Preventatives:</strong> Keep your pet protected with timely treatments.</li>
+        <li><strong>Emergency Support:</strong> Fast access to trusted medical professionals when you need it most.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Benefits for Your Pet</h2>
+      <ul>
+        <li>Early detection of potential health issues</li>
+        <li>Reduces stress with familiar handling and environment</li>
+        <li>Ensures up-to-date vaccination and preventive care</li>
+        <li>Improves lifespan and overall wellness</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Schedule a Vet Appointment</h2>
+      <p>Health starts with expert care—book your certified vet today.</p>
+      <a href="booking.html">Book a Vet</a>
+    </section>
+  </div>
+
+</body>
+</html>

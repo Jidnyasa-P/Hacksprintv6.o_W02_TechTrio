@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | PawPalace</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .shop-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .shop-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .shop-card img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+        border-radius: 12px;
+      }
+
+      .shop-card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .shop-card p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 0.3rem;
+      }
+
+      .filter-bar {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        background-color: #ddd;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background-color: #2a9d8f;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <img src="images/logo.png" alt="Logo" class="w-20 h-20 rounded-full" />
+          <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
+        </div>
+        <nav class="space-x-6">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="services.html" class="hover:text-blue-600">Services</a>
+          <a href="shop.html" class="text-blue-600 font-semibold">Shop</a>
+          <a href="booking.html" class="hover:text-blue-600">Book Now</a>
+          <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
+          <a href="login.html" class="hover:text-blue-600">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-4">Dog Shop</h2>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Toys">Toys</button>
+          <button class="filter-btn" data-filter="Accessories">Accessories</button>
+          <button class="filter-btn" data-filter="Food">Food</button>
+          <button class="filter-btn" data-filter="Clothes">Clothes</button>
+        </div>
+
+        <div class="shop-grid mt-8" id="shopItems">
+          <!-- JS will populate this -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white text-center py-6 mt-16 shadow-inner">
+      <p class="text-gray-500 text-sm">&copy; 2025 PawPalace. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const shopData = {
+        Toys: [
+          { name: "Chewy Bone", price: "₹199", image: "images/bone.png" },
+          { name: "Rope Tug", price: "₹149", image: "images/ropetugtoy.jpg" },
+          { name: "Squeaky Ball", price: "₹99", image: "images/balltoy.jpg" },
+          { name: "Plush Squirrel", price: "₹179", image: "images/plush.jpg" },
+          { name: "Rubber Ring", price: "₹129", image: "images/ring.jpg" },
+          { name: "Treat Puzzle", price: "₹259", image: "images/treatpuzzle.jpg" }
+        ],
+        Accessories: [
+          { name: "Leather Collar", price: "₹299", image: "images/collar.jpg" },
+          { name: "Dog Harness", price: "₹399", image: "images/harness.jpg" },
+          { name: "Pet Bowtie", price: "₹199", image: "images/bowtie.jpg" },
+          { name: "Dog Shoes", price: "₹349", image: "images/shoes.jpg" },
+          { name: "LED Leash", price: "₹499", image: "images/led.jpg" },
+          { name: "Water Bottle", price: "₹299", image: "images/bottle.jpg" }
+        ],
+        Food: [
+          { name: "Premium Kibble", price: "₹699", image: "images/kibble.jpg" },
+          { name: "Dog Biscuits", price: "₹249", image: "images/biscuits.jpg" },
+          { name: "Chicken Treats", price: "₹299", image: "images/chicken.png" },
+          { name: "Lamb Bites", price: "₹349", image: "images/lamb.jpg" },
+          { name: "Salmon Rolls", price: "₹389", image: "images/rolls.jpg" },
+          { name: "Dental Chews", price: "₹269", image: "images/chews.jpg" }
+        ],
+        Clothes: [
+          { name: "Winter Jacket", price: "₹799", image: "images/jackets.jpg" },
+          { name: "Raincoat", price: "₹649", image: "images/raincoat.jpg" },
+          { name: "Pajamas", price: "₹549", image: "images/pajamas.jpg" },
+          { name: "Christmas Sweater", price: "₹699", image: "images/sweater.jpg" },
+          { name: "Tuxedo Outfit", price: "₹899", image: "images/tuxedo.jpg" },
+          { name: "Summer Tank", price: "₹399", image: "images/tank.jpg" }
+        ]
+      };
+
+      const shopItems = document.getElementById("shopItems");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+
+      function renderItems(category) {
+        shopItems.innerHTML = "";
+
+        for (let cat in shopData) {
+          if (category !== "all" && cat !== category) continue;
+
+          shopData[cat].forEach(item => {
+            const card = document.createElement("div");
+            card.className = "shop-card";
+            card.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" />
+              <h4>${item.name}</h4>
+              <p>💰 ${item.price}</p>
+            `;
+            shopItems.appendChild(card);
+          });
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderItems(btn.dataset.filter);
+        });
+      });
+
+      renderItems("all");
+    </script>
+  </body>
+</html>

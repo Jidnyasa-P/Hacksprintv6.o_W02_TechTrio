@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comfortable Boarding</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --light-bg: #f0f8ff;
+      --card-bg: #ffffff;
+      --text: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: var(--light-bg); /* fallback color */
+      color: var(--text);
+      z-index: 0;
+      overflow-x: hidden;
+      cursor: url("images/cursor.cur"), auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/background.png") no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #357abd;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(0.98);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background-color: #e3f2fd;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .cta a:hover {
+      background-color: #357abd;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 30px 15px;
+      }
+
+      .cta a {
+        width: 100%;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/boarding.png" alt="Comfortable Boarding Icon" />
+    <h1>Comfortable Boarding</h1>
+    <p>Safe, Clean, and Loving Stays While You’re Away</p>
+  </header>
+
+  <div class="content">
+    <section>
+      <h2>Why Choose Our Comfortable Boarding?</h2>
+      <p>
+        Whether it’s a weekend trip or an extended vacation, our boarding service gives your pet a second home with round-the-clock care. From cozy sleeping areas to personalized attention, our facilities are designed to reduce stress and offer peace of mind. Your pet will be in the hands of trained caregivers who provide love, comfort, and fun just like family.
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Private Kennels or Suites:</strong> Clean, climate-controlled spaces designed for comfort.</li>
+        <li><strong>Daily Exercise & Play:</strong> Scheduled walks and playtime to keep pets happy and active.</li>
+        <li><strong>24/7 Supervision:</strong> Staffed facilities with constant monitoring and check-ins.</li>
+        <li><strong>Feeding & Medication:</strong> Personalized meal plans and medical care as needed.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Benefits for Your Pet</h2>
+      <ul>
+        <li>Reduces separation anxiety with a familiar routine and loving care</li>
+        <li>Provides stimulation through play and social time with other pets</li>
+        <li>Promotes healthy eating and rest in a secure environment</li>
+        <li>Eliminates the risk of pet loneliness and boredom during your absence</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Book a Boarding Stay</h2>
+      <p>Your pet’s vacation starts here. Reserve a spot with our comfortable boarding facilities today.</p>
+      <a href="booking.html">Reserve Now</a>
+    </section>
+  </div>
+
+</body>
+</html>
