@@ -10,6 +10,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// DEBUG LOGGING
+file_put_contents("debug.txt", print_r($_POST, true));
+
 // Get form values
 $full_name = $_POST['full_name'];
 $email = $_POST['email'];
