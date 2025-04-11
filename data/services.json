@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Daily Dog Walks",
+      "description": "Energetic and fun walks with trained walkers for your dog.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Full Grooming",
+      "description": "Bath, haircut, nail trimming and more – all under one roof.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Overnight Pet Boarding",
+      "description": "Safe and cozy boarding facilities with 24/7 care.",
+      "category": "Boarding"
+    },
+    {
+      "title": "Weekend Walk Plans",
+      "description": "Flexible weekend walks tailored to your dog’s needs.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Paw Spa",
+      "description": "Luxury spa experience with coat massage and cleaning.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Holiday Boarding",
+      "description": "Going on a trip? Leave your pet with us worry-free.",
+      "category": "Boarding"
+    }
+  ]
+  
