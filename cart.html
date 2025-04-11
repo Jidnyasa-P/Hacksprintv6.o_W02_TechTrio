@@ -39,7 +39,9 @@
         <h3 class="text-xl font-semibold">Total: <span id="cartTotal" class="text-green-600">₹0</span></h3>
       </div>
       <div class="text-center mt-6">
-        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full text-sm" onclick="checkout()">Proceed to Checkout</button>
+        <p class="text-sm text-gray-500 mb-2">Click below to pay using PayPal (includes Debit/Credit Card)</p>
+        <div class="flex justify-center mt-4">
+          <div id="paypal-button-container" class="w-full max-w-xs"></div>
       </div>
     </div>
   </section>
@@ -47,6 +49,9 @@
   <footer class="bg-white text-center py-6 mt-16 shadow-inner">
     <p class="text-gray-500 text-sm">&copy; 2025 PawPalace. All rights reserved.</p>
   </footer>
+
+  <!-- PayPal SDK for Sandbox Testing -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 
   <script>
     const cartContainer = document.getElementById("cartContainer");
@@ -79,6 +84,7 @@
       if (cart.length === 0) {
         cartContainer.innerHTML = `<p class="text-center text-gray-500">Your cart is empty.</p>`;
         cartTotal.textContent = "₹0";
+        document.getElementById("paypal-button-container").innerHTML = "";
         return;
       }
 
@@ -98,21 +104,32 @@
 
       const total = calculateTotal(cart);
       cartTotal.textContent = `₹${total}`;
+      renderPayPalButton(total);
     }
 
-    function checkout() {
-      const cart = getCartItems();
-      if (cart.length === 0) {
-        alert("Your cart is empty!");
-        return;
-      }
+    function renderPayPalButton(totalINR) {
+      const usdConversionRate = 83; // Approx INR to USD rate
+      const totalUSD = (totalINR / usdConversionRate).toFixed(2);
+      document.getElementById("paypal-button-container").innerHTML = "";
 
-      alert("Proceeding to payment (mock)");
-      // Here you can redirect to your payment gateway page
-      // window.location.href = "payment.html";
-
-      localStorage.removeItem("cart");
-      renderCart();
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: totalUSD
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Payment successful! Thank you, ' + details.payer.name.given_name);
+            localStorage.removeItem("cart");
+            renderCart();
+          });
+        }
+      }).render('#paypal-button-container');
     }
 
     renderCart();
