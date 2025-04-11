@@ -6,6 +6,7 @@
     <title>Login | Sign Up - PawPalace</title>
     <link rel="icon" type="image/png" href="images/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
       body {
@@ -76,62 +77,81 @@
       </form>
     </div>
 
-    <!-- Script Logic -->
-    <script>
-      const loginTab = document.getElementById("loginTab");
-      const signupTab = document.getElementById("signupTab");
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    
+      const firebaseConfig = {
+        apiKey: "AIzaSyCtuCyM8YV3ZcHOdW0VFCIZT6GnVzn-BWc",
+        authDomain: "pawpalace-12345.firebaseapp.com",
+        projectId: "pawpalace-12345",
+        storageBucket: "pawpalace-12345.firebasestorage.app",
+        messagingSenderId: "654164033202",
+        appId: "1:654164033202:web:565d97cba203bade8e53ab"
+      };
+    
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
       const loginForm = document.getElementById("loginForm");
       const signupForm = document.getElementById("signupForm");
-
-      loginTab.addEventListener("click", () => {
-        loginTab.classList.add("text-blue-600", "border-b-2", "border-blue-500");
-        signupTab.classList.remove("text-blue-600", "border-b-2", "border-blue-500");
-        loginForm.classList.remove("hidden");
-        signupForm.classList.add("hidden");
-      });
-
-      signupTab.addEventListener("click", () => {
-        signupTab.classList.add("text-blue-600", "border-b-2", "border-blue-500");
-        loginTab.classList.remove("text-blue-600", "border-b-2", "border-blue-500");
-        signupForm.classList.remove("hidden");
-        loginForm.classList.add("hidden");
-      });
-
-      signupForm.addEventListener("submit", function (e) {
+    
+      signupForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        const name = signupForm.full_name.value;
         const email = signupForm.email.value;
         const password = signupForm.password.value;
-
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-        if (users.find((u) => u.email === email)) {
-          alert("Signup failed. Email already exists.");
-        } else {
-          users.push({ name, email, password });
-          localStorage.setItem("users", JSON.stringify(users));
-          alert("Signup successful!");
-          loginTab.click();
-        }
+    
+        createUserWithEmailAndPassword(auth, email, password)
+          .then(() => {
+            alert("Signup successful!");
+            signupForm.reset();
+            document.getElementById("loginTab").click();
+          })
+          .catch((error) => {
+            alert("Signup failed: " + error.message);
+          });
       });
-
-      loginForm.addEventListener("submit", function (e) {
+    
+      loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const email = loginForm.email.value;
         const password = loginForm.password.value;
-
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-        const user = users.find((u) => u.email === email && u.password === password);
-
-        if (user) {
-          localStorage.setItem("isLoggedIn", "true");
-          localStorage.setItem("userName", user.name);
-          alert("Login successful!");
-          window.location.href = "dashboard.html";
-        } else {
-          alert("Login failed. Check your email or password.");
-        }
+    
+        signInWithEmailAndPassword(auth, email, password)
+          .then(() => {
+            alert("Login successful!");
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userEmail", email);
+            window.location.href = "dashboard.html";
+          })
+          .catch((error) => {
+            alert("Login failed: " + error.message);
+          });
+      });
+    </script>    
+    
+    <script>
+      const loginTab = document.getElementById("loginTab");
+      const signupTab = document.getElementById("signupTab");
+    
+      loginTab.addEventListener("click", () => {
+        loginTab.classList.add("text-blue-600", "border-blue-500");
+        signupTab.classList.remove("text-blue-600", "border-blue-500");
+        signupTab.classList.add("text-gray-500");
+        loginForm.classList.remove("hidden");
+        signupForm.classList.add("hidden");
+      });
+    
+      signupTab.addEventListener("click", () => {
+        signupTab.classList.add("text-blue-600", "border-blue-500");
+        loginTab.classList.remove("text-blue-600", "border-blue-500");
+        loginTab.classList.add("text-gray-500");
+        signupForm.classList.remove("hidden");
+        loginForm.classList.add("hidden");
       });
     </script>
+    
 
     <!-- Footer -->
     <footer class="bg-white text-center py-6 mt-16 shadow-inner">
