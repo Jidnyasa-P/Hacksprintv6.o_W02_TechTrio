@@ -11,4 +11,5 @@ function addBookingToTable(item) {
     <td class="py-2 px-4 border-b">${item.contact}</td>
   `;
   table.appendChild(row);
+  
 }
