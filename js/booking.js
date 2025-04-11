@@ -31,4 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
     alert("Booking submitted and added to the table!");
   });
+  
+  
 });

@@ -1,0 +1,26 @@
+{
+  "name": "hacksprintv6.o_w02_techtrio-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jidnyasa-P/Hacksprintv6.o_W02_TechTrio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jidnyasa-P/Hacksprintv6.o_W02_TechTrio/issues"
+  },
+  "homepage": "https://github.com/Jidnyasa-P/Hacksprintv6.o_W02_TechTrio#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}
