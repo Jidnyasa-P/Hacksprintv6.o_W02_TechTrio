@@ -5,19 +5,44 @@
       "category": "Dog Walking"
     },
     {
-      "title": "Full Grooming",
-      "description": "Bath, haircut, nail trimming and more – all under one roof.",
-      "category": "Grooming"
-    },
-    {
-      "title": "Overnight Pet Boarding",
-      "description": "Safe and cozy boarding facilities with 24/7 care.",
-      "category": "Boarding"
-    },
-    {
       "title": "Weekend Walk Plans",
       "description": "Flexible weekend walks tailored to your dog’s needs.",
       "category": "Dog Walking"
+    },
+    {
+      "title": "Puppy Walks",
+      "description": "Short, gentle walks with bathroom breaks and playtime.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Senior Dog Walks",
+      "description": "Slow-paced walks tailored for older dogs' needs.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Adventure Walks",
+      "description": "Exciting trail walks and nature outings for active dogs.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Group Walks",
+      "description": "Social walks with other friendly dogs for fun and exercise.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Late-Night Walks",
+      "description": "Evening or night walks for busy pet parents or night owls.",
+      "category": "Dog Walking"
+    },
+    {
+      "title": "Custom Walk Plans",
+      "description": "Personalized walking routines based on your dog’s energy and needs.",
+      "category": "Dog Walking"
+    },    
+    {
+      "title": "Full Grooming",
+      "description": "Bath, haircut, nail trimming and more – all under one roof.",
+      "category": "Grooming"
     },
     {
       "title": "Paw Spa",
@@ -25,9 +50,193 @@
       "category": "Grooming"
     },
     {
+      "title": "Bath & Brush",
+      "description": "Gentle bath and brush-out for a clean, soft coat.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Nail Trimming",
+      "description": "Quick and safe nail clipping to keep paws healthy.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Ear Cleaning",
+      "description": "Thorough ear cleaning to prevent buildup and infections.",
+      "category": "Grooming"
+    },
+    {
+      "title": "De-shedding Treatment",
+      "description": "Reduce loose fur with deep brushing and coat care.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Teeth Brushing",
+      "description": "Gentle dental care to support fresh breath and hygiene.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Paw & Pad Care",
+      "description": "Moisturizing treatment for dry or cracked paw pads.",
+      "category": "Grooming"
+    },
+    {
+      "title": "Overnight Pet Boarding",
+      "description": "Safe and cozy boarding facilities with 24/7 care.",
+      "category": "Pet Boarding"
+    },
+    {
       "title": "Holiday Boarding",
       "description": "Going on a trip? Leave your pet with us worry-free.",
-      "category": "Boarding"
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Weekend Stays",
+      "description": "Perfect for short getaways and weekend travel plans.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Long-Term Boarding",
+      "description": "Extended stays with daily care, love, and supervision.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Private Suite Boarding",
+      "description": "Premium suites for pets who prefer peace and quiet.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Play & Stay",
+      "description": "Daily play sessions included during your pet’s stay.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Boarding with Daily Walks",
+      "description": "Includes regular outdoor walks and enrichment time.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Home-Style Boarding",
+      "description": "Personalized boarding in a home setting for a stress-free stay.",
+      "category": "Pet Boarding"
+    },
+    {
+      "title": "Puppy Basics",
+      "description": "Foundational training for young pups – sit, stay, and socialize.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Obedience Training",
+      "description": "Core commands and behavior shaping for well-mannered pets.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Leash Training",
+      "description": "Teach your dog to walk calmly and confidently on a leash.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Potty Training",
+      "description": "Structured routines to help your dog learn indoor manners.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Behavior Correction",
+      "description": "Address jumping, barking, and other common issues.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Socialization Sessions",
+      "description": "Safe, guided interactions with people and other pets.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Advanced Commands",
+      "description": "Off-leash control, recall, and complex commands for pros.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "Custom Training Plans",
+      "description": "One-on-one programs tailored to your dog’s unique needs.",
+      "category": "Pet Training"
+    },
+    {
+      "title": "General Health Check-up",
+      "description": "Routine wellness exams to keep your pet in top shape.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Vaccinations",
+      "description": "Essential vaccines to protect your pet from common diseases.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Deworming & Parasite Control",
+      "description": "Preventive care against worms, fleas, and ticks.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Emergency Care",
+      "description": "Urgent care for accidents, injuries, or sudden illness.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Diagnostic Testing",
+      "description": "Blood work, x-rays, and lab tests for accurate diagnoses.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Spaying & Neutering",
+      "description": "Safe and effective procedures to prevent overpopulation.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Dental Care",
+      "description": "Oral exams, cleanings, and treatments for healthy teeth.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "Senior Pet Care",
+      "description": "Specialized care and monitoring for aging pets.",
+      "category": "Veterinary"
+    },
+    {
+      "title": "In-Home Pet Sitting",
+      "description": "Loving care for your pet right in the comfort of your home.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Drop-In Visits",
+      "description": "Quick visits for feeding, playtime, and bathroom breaks.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Overnight Sitting",
+      "description": "Stay-in care for pets needing extra comfort and company.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Weekend Sitting",
+      "description": "Perfect for short trips and weekend getaways.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Senior Pet Sitting",
+      "description": "Gentle, attentive care for older pets with special needs.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Puppy Sitting",
+      "description": "Supervised play, feeding, and training for young pups.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Multiple Pet Care",
+      "description": "Experienced care for homes with more than one pet.",
+      "category": "Pet Sitting"
+    },
+    {
+      "title": "Daily Updates",
+      "description": "Photos and notes to keep you in the loop while you're away.",
+      "category": "Pet Sitting"
     }
   ]
-  
