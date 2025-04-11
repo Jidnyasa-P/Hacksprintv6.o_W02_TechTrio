@@ -87,6 +87,11 @@
           <a href="services.html" class="hover:text-blue-600">Services</a>
           <a href="vets.html" class="hover:text-blue-600">Vets</a>
           <a href="shop.html" class="text-blue-600 font-semibold">Shop</a>
+          <a href="#" class="hover:text-blue-600 relative">
+            🛒 Cart
+            <span id="cart-count" class="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full absolute -top-2 -right-3">0</span>
+          </a>
+          
           <a href="booking.html" class="hover:text-blue-600">Book Now</a>
           <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
           <a href="login.html" class="hover:text-blue-600">Login</a>
@@ -117,73 +122,98 @@
       <p class="text-gray-500 text-sm">&copy; 2025 PawPalace. All rights reserved.</p>
     </footer>
 
+   <!-- inside your <script> tag -->
     <script>
-      const shopData = {
-        Toys: [
-          { name: "Chewy Bone", price: "₹199", image: "images/bone.png" },
-          { name: "Rope Tug", price: "₹149", image: "images/ropetugtoy.jpg" },
-          { name: "Squeaky Ball", price: "₹99", image: "images/balltoy.jpg" },
-          { name: "Plush Squirrel", price: "₹179", image: "images/plush.jpg" },
-          { name: "Rubber Ring", price: "₹129", image: "images/ring.jpg" },
-          { name: "Treat Puzzle", price: "₹259", image: "images/treatpuzzle.jpg" }
-        ],
-        Accessories: [
-          { name: "Leather Collar", price: "₹299", image: "images/collar.jpg" },
-          { name: "Dog Harness", price: "₹399", image: "images/harness.jpg" },
-          { name: "Pet Bowtie", price: "₹199", image: "images/bowtie.jpg" },
-          { name: "Dog Shoes", price: "₹349", image: "images/shoes.jpg" },
-          { name: "LED Leash", price: "₹499", image: "images/led.jpg" },
-          { name: "Water Bottle", price: "₹299", image: "images/bottle.jpg" }
-        ],
-        Food: [
-          { name: "Premium Kibble", price: "₹699", image: "images/kibble.jpg" },
-          { name: "Dog Biscuits", price: "₹249", image: "images/biscuits.jpg" },
-          { name: "Chicken Treats", price: "₹299", image: "images/chicken.png" },
-          { name: "Lamb Bites", price: "₹349", image: "images/lamb.jpg" },
-          { name: "Salmon Rolls", price: "₹389", image: "images/rolls.jpg" },
-          { name: "Dental Chews", price: "₹269", image: "images/chews.jpg" }
-        ],
-        Clothes: [
-          { name: "Winter Jacket", price: "₹799", image: "images/jackets.jpg" },
-          { name: "Raincoat", price: "₹649", image: "images/raincoat.jpg" },
-          { name: "Pajamas", price: "₹549", image: "images/pajamas.jpg" },
-          { name: "Christmas Sweater", price: "₹699", image: "images/sweater.jpg" },
-          { name: "Tuxedo Outfit", price: "₹899", image: "images/tuxedo.jpg" },
-          { name: "Summer Tank", price: "₹399", image: "images/tank.jpg" }
-        ]
-      };
-
-      const shopItems = document.getElementById("shopItems");
-      const filterBtns = document.querySelectorAll(".filter-btn");
-
-      function renderItems(category) {
-        shopItems.innerHTML = "";
-
-        for (let cat in shopData) {
-          if (category !== "all" && cat !== category) continue;
-
-          shopData[cat].forEach(item => {
-            const card = document.createElement("div");
-            card.className = "shop-card";
-            card.innerHTML = `
-              <img src="${item.image}" alt="${item.name}" />
-              <h4>${item.name}</h4>
-              <p>💰 ${item.price}</p>
-            `;
-            shopItems.appendChild(card);
-          });
+        const shopData = {
+          Toys: [
+            { name: "Chewy Bone", price: "₹199", image: "images/bone2.jpg", link: "https://https://www.amazon.in/dp/B08M34ZKL4" },
+            { name: "Rope Tug", price: "₹149", image: "images/ropetugtoy.jpg", link: "https://www.amazon.in/dp/B09F8XYFLS" },
+            { name: "Squeaky Ball", price: "₹99", image: "images/balltoy.jpg", link: "https://www.amazon.in/dp/B09H1K6M7T" },
+            { name: "Plush Squirrel", price: "₹179", image: "images/plush.jpg", link: "https://www.amazon.in/dp/B09JG8YNVC" },
+            { name: "Rubber Ring", price: "₹129", image: "images/ring.jpg", link: "https://www.amazon.in/dp/B09N2WKKQH" },
+            { name: "Treat Puzzle", price: "₹259", image: "images/treatpuzzle.jpg", link: "https://www.amazon.in/dp/B09D9Z6QZL" }
+          ],
+          Accessories: [
+      { name: "Leather Collar", price: "₹299", image: "images/collar.jpg", link: "https://www.amazon.in/dp/B09MZKKPRC" },
+      { name: "Dog Harness", price: "₹399", image: "images/harness.jpg", link: "https://www.amazon.in/dp/B09FLGM5R9" },
+      { name: "Pet Bowtie", price: "₹199", image: "images/bowtie.jpg", link: "https://www.amazon.in/dp/B08XMP4Z7Z" },
+      { name: "Dog Shoes", price: "₹349", image: "images/shoes.jpg", link: "https://www.amazon.in/dp/B09GL5GLXC" },
+      { name: "LED Leash", price: "₹499", image: "images/led.jpg", link: "https://www.amazon.in/dp/B09BFKWMM4" },
+      { name: "Water Bottle", price: "₹299", image: "images/bottle.jpg", link: "https://www.amazon.in/dp/B09G6ZCT4K" }
+    ],
+    Food: [
+      { name: "Premium Kibble", price: "₹699", image: "images/kibble.jpg", link: "https://www.amazon.in/dp/B08GYCKL61" },
+      { name: "Dog Biscuits", price: "₹249", image: "images/biscuits.jpg", link: "https://www.amazon.in/dp/B08L3YKWLD" },
+      { name: "Chicken Treats", price: "₹299", image: "images/chicken.png", link: "https://www.amazon.in/dp/B08M4K6V8F" },
+      { name: "Lamb Bites", price: "₹349", image: "images/lamb.jpg", link: "https://www.amazon.in/dp/B08ZYFJHGR" },
+      { name: "Salmon Rolls", price: "₹389", image: "images/rolls.jpg", link: "https://www.amazon.in/dp/B09FYDYD8S" },
+      { name: "Dental Chews", price: "₹269", image: "images/chews.jpg", link: "https://www.amazon.in/dp/B08XRD5NJD" }
+    ],
+    Clothes: [
+      { name: "Winter Jacket", price: "₹799", image: "images/jackets.jpg", link: "https://www.amazon.in/dp/B08Z3D5B6T" },
+      { name: "Raincoat", price: "₹649", image: "images/raincoat.jpg", link: "https://www.amazon.in/dp/B08VS9FZPB" },
+      { name: "Pajamas", price: "₹549", image: "images/pajamas.jpg", link: "https://www.amazon.in/dp/B08T1S9M35" },
+      { name: "Christmas Sweater", price: "₹699", image: "images/sweater.jpg", link: "https://www.amazon.in/dp/B08L5YV34G" },
+      { name: "Tuxedo Outfit", price: "₹899", image: "images/tuxedo.jpg", link: "https://www.amazon.in/dp/B07X8M3KGG" },
+      { name: "Summer Tank", price: "₹399", image: "images/tank.jpg", link: "https://www.amazon.in/dp/B08W8Z9HBD" }
+    ]
+        };
+      
+        const shopItems = document.getElementById("shopItems");
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const cartCount = document.getElementById("cart-count");
+      
+        function updateCartCount() {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cartCount.textContent = cart.length;
         }
-      }
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-          filterBtns.forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
-          renderItems(btn.dataset.filter);
+      
+        function addToCart(item) {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart.push(item);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartCount();
+          alert(`${item.name} added to cart!`);
+        }
+      
+        function renderItems(category) {
+          shopItems.innerHTML = "";
+      
+          for (let cat in shopData) {
+            if (category !== "all" && cat !== category) continue;
+      
+            shopData[cat].forEach(item => {
+              const card = document.createElement("div");
+              card.className = "shop-card";
+              card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" />
+                <h4>${item.name}</h4>
+                <p>💰 ${item.price}</p>
+                <div class="flex justify-center gap-2 mt-3">
+                  <a href="${item.link}" target="_blank" class="px-3 py-1 bg-green-600 text-white rounded-full hover:bg-green-700 text-sm">Buy Now</a>
+                  <button class="px-3 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 text-sm">Add to Cart</button>
+                </div>
+              `;
+      
+              // Add click event to "Add to Cart" button
+              card.querySelector("button").addEventListener("click", () => addToCart(item));
+      
+              shopItems.appendChild(card);
+            });
+          }
+        }
+      
+        filterBtns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            renderItems(btn.dataset.filter);
+          });
         });
-      });
-
-      renderItems("all");
-    </script>
+      
+        // Initial load
+        renderItems("all");
+        updateCartCount();
+      </script>
   </body>
 </html>
