@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | PawPalace</title>
-<link rel="icon" type="image/png" href="images\logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -25,18 +25,14 @@
   <body class="bg-blue-50 text-gray-800">
     <!-- Navbar -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-      <div
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
         <nav class="space-x-6">
           <a href="index.html" class="hover:text-blue-600">Home</a>
           <a href="services.html" class="hover:text-blue-600">Services</a>
           <a href="booking.html" class="hover:text-blue-600">Book Now</a>
-          <a href="dashboard.html" class="text-blue-600 font-semibold"
-            >Dashboard</a
-          >
-          <a href="login.html" class="hover:text-blue-600">User</a>
+          <a href="dashboard.html" class="text-blue-600 font-semibold">Dashboard</a>
+          <a href="#" onclick="logout()" class="hover:text-blue-600">Logout</a>
         </nav>
       </div>
     </header>
@@ -44,12 +40,10 @@
     <!-- Dashboard Content -->
     <section class="py-16">
       <div class="container mx-auto px-4">
-        <p id="userDisplay" class="text-blue-600 font-bold"></p>
+        <h2 id="userDisplay" class="text-3xl font-bold text-blue-700 text-center mb-10"></h2>
 
-        <div class="mb-4 flex gap-4 items-center">
-          <label for="serviceFilter" class="text-sm font-medium"
-            >Filter by Service:</label
-          >
+        <div class="mb-6 flex gap-4 items-center">
+          <label for="serviceFilter" class="text-sm font-medium">Filter by Service:</label>
           <select id="serviceFilter" class="border px-2 py-1 rounded">
             <option value="All">All</option>
             <option value="Dog Walking">Dog Walking</option>
@@ -57,16 +51,14 @@
             <option value="Grooming">Grooming</option>
             <option value="Pet Boarding">Pet Boarding</option>
             <option value="Veterinary">Veterinary</option>
-            <option value="Pet Sitters">Pet Sitting</option>
+            <option value="Pet Sitting">Pet Sitting</option>
           </select>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Upcoming Bookings -->
           <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-xl font-semibold text-blue-600 mb-4">
-              Your Upcoming Bookings
-            </h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4">Your Upcoming Bookings</h3>
             <ul class="space-y-4">
               <li class="border-l-4 border-blue-600 pl-4">
                 <p><strong>Service:</strong> Dog Walking</p>
@@ -83,11 +75,9 @@
 
           <!-- Profile Info -->
           <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-xl font-semibold text-blue-600 mb-4">
-              Your Profile
-            </h3>
-            <p><strong>Name:</strong> Riya Sharma</p>
-            <p><strong>Email:</strong> riya@example.com</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4">Your Profile</h3>
+            <p><strong>Name:</strong> <span id="profileName">-</span></p>
+            <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
             <p><strong>Location:</strong> Pune</p>
             <p class="mt-4">
               <a href="#" class="text-blue-600 hover:underline">Edit Profile</a>
@@ -97,9 +87,7 @@
 
         <!-- Booking History -->
         <div class="bg-white p-6 rounded-xl shadow mt-10">
-          <h3 class="text-xl font-semibold text-blue-600 mb-4">
-            Past Bookings
-          </h3>
+          <h3 class="text-xl font-semibold text-blue-600 mb-4">Past Bookings</h3>
           <table class="w-full table-auto text-left">
             <thead>
               <tr class="text-gray-600">
@@ -127,13 +115,11 @@
 
     <!-- Footer -->
     <footer class="bg-white text-center py-6 mt-16 shadow-inner">
-      <p class="text-gray-500 text-sm">
-        &copy; 2025 PawPalace. All rights reserved.
-      </p>
+      <p class="text-gray-500 text-sm">&copy; 2025 PawPalace. All rights reserved.</p>
     </footer>
 
+    <!-- Chatbot -->
     <button id="chatbotToggle" class="chatbot-toggle">💬</button>
-
     <div class="chatbot-container" id="chatbot">
       <div class="chatbot-header">PawPal Bot</div>
       <div class="chatbot-messages" id="chatMessages"></div>
@@ -143,20 +129,33 @@
       </div>
     </div>
 
+    <!-- JS Logic -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const userDisplay = document.getElementById("dashboardUserName");
-        const name = localStorage.getItem("userName");
-        if (name) {
-          userDisplay.textContent = name;
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+          alert("Please login first.");
+          window.location.href = "login.html";
+        } else {
+          const name = localStorage.getItem("userName") || "User";
+          const email = getUserEmail(name);
+          document.getElementById("userDisplay").textContent = `Welcome, ${name}!`;
+          document.getElementById("profileName").textContent = name;
+          document.getElementById("profileEmail").textContent = email || "Not Available";
         }
-        window.addEventListener("DOMContentLoaded", () => {
-          if (localStorage.getItem("isLoggedIn") === "true") {
-            const name = localStorage.getItem("userName");
-            document.getElementById("userDisplay").textContent = `Welcome, ${name}!`;
-          }
-        });        
       });
+
+      function logout() {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userName");
+        alert("You have been logged out.");
+        window.location.href = "login.html";
+      }
+
+      function getUserEmail(name) {
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+        const user = users.find((u) => u.name === name);
+        return user?.email || "";
+      }
     </script>
 
     <script src="js/chatbot.js"></script>
