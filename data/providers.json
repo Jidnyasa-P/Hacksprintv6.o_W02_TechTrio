@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Paws & Walks",
+      "service": "Dog Walking",
+      "location": "Pune",
+      "rating": 4.8,
+      "pricePerHour": 200,
+      "contact": "9876543210",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Fur Style Studio",
+      "service": "Grooming",
+      "location": "Mumbai",
+      "rating": 4.5,
+      "pricePerSession": 500,
+      "contact": "9876501234",
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Bark & Board",
+      "service": "Boarding",
+      "location": "Bangalore",
+      "rating": 4.7,
+      "pricePerDay": 800,
+      "contact": "9823456789",
+      "available": false
+    },
+    {
+      "id": 4,
+      "name": "Happy Tails",
+      "service": "Dog Walking",
+      "location": "Delhi",
+      "rating": 4.6,
+      "pricePerHour": 150,
+      "contact": "9812312345",
+      "available": true
+    }
+  ]
+  

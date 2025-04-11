@@ -1,0 +1,53 @@
+[
+    {
+      "id": 101,
+      "petName": "Bruno",
+      "ownerName": "Rohit Sharma",
+      "service": "Dog Walking",
+      "date": "2025-04-10",
+      "time": "10:00 AM",
+      "contact": "9998877665",
+      "providerId": 1
+    },
+    {
+      "id": 102,
+      "petName": "Milo",
+      "ownerName": "Anita Desai",
+      "service": "Grooming",
+      "date": "2025-04-11",
+      "time": "03:00 PM",
+      "contact": "9887766554",
+      "providerId": 2
+    },
+    {
+      "id": 103,
+      "petName": "Simba",
+      "ownerName": "Arjun Mehta",
+      "service": "Boarding",
+      "date": "2025-04-12",
+      "time": "",
+      "contact": "9776655443",
+      "providerId": 3
+    },
+    {
+      "id": 104,
+      "petName": "Bella",
+      "ownerName": "Sneha Iyer",
+      "service": "Dog Walking",
+      "date": "2025-04-13",
+      "time": "05:00 PM",
+      "contact": "9665544332",
+      "providerId": 4
+    },
+    {
+      "id": 105,
+      "petName": "Charlie",
+      "ownerName": "{{loggedInUser}}",
+      "service": "Dog Walking",
+      "date": "2025-04-14",
+      "time": "04:00 PM",
+      "contact": "0000000000",
+      "providerId": 5
+    }
+  ]
+  
