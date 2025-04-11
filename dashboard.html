@@ -43,7 +43,7 @@
     <!-- Dashboard Content -->
     <section class="py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-2xl font-bold">Welcome, <span id="dashboardUserName"></span></h2>
+        <p id="userDisplay" class="text-blue-600 font-bold"></p>
 
         <div class="mb-4 flex gap-4 items-center">
           <label for="serviceFilter" class="text-sm font-medium"
@@ -149,6 +149,12 @@
         if (name) {
           userDisplay.textContent = name;
         }
+        window.addEventListener("DOMContentLoaded", () => {
+          if (localStorage.getItem("isLoggedIn") === "true") {
+            const name = localStorage.getItem("userName");
+            document.getElementById("userDisplay").textContent = `Welcome, ${name}!`;
+          }
+        });        
       });
     </script>
 
