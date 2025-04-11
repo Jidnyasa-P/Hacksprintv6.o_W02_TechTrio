@@ -1,212 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Service | PawPalace</title>
-  <link rel="icon" type="image/png" href="images/logo.png" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Service | PawPalace</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-blue-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
+        <nav class="space-x-6">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="services.html" class="hover:text-blue-600">Services</a>
+          <a href="booking.html" class="text-blue-600 font-semibold"
+            >Book Now</a
+          >
+          <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
+          <a href="login.html" class="hover:text-blue-600">User</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="p-6 max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Upcoming Pet Service Bookings</h2>
+      <div class="overflow-x-auto rounded-xl shadow-lg">
+        <table class="w-full table-auto border-collapse text-left bg-white">
+          <thead class="bg-blue-100 text-gray-700">
+            <tr>
+              <th class="py-3 px-4">Pet Name</th>
+              <th class="py-3 px-4">Owner</th>
+              <th class="py-3 px-4">Service</th>
+              <th class="py-3 px-4">Sub-Service</th>
+              <th class="py-3 px-4">Date</th>
+              <th class="py-3 px-4">Time</th>
+              <th class="py-3 px-4">Email</th>
+            </tr>
+          </thead>
+          <tbody id="bookingTable" class="text-gray-800"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-16">
+      <div
+        class="container mx-auto px-4 max-w-2xl bg-white rounded-xl shadow p-8"
+      >
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">
+          Book a Pet Service
+        </h2>
+        <form class="space-y-6" id="bookingForm">
+          <div>
+            <label class="block mb-2 font-medium">Pet Name</label>
+            <input
+              type="text"
+              name="petName"
+              placeholder="Pet's Name"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Owner Name</label>
+            <input
+              type="text"
+              name="ownerName"
+              placeholder="Your Name"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Email Address</label>
+            <input
+              type="email"
+              name="contact"
+              placeholder="john@example.com"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Select Service</label>
+            <select
+              name="service"
+              id="mainService"
+              required
+              class="w-full border rounded px-4 py-2"
+            >
+              <option disabled selected>Choose a service</option>
+              <option value="Dog Walking">Dog Walking</option>
+              <option value="Pet Training">Pet Training</option>
+              <option value="Grooming">Grooming</option>
+              <option value="Pet Boarding">Pet Boarding</option>
+              <option value="Veterinary">Veterinary</option>
+              <option value="Pet Sitting">Pet Sitting</option>
+            </select>
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Sub-Service</label>
+            <select
+              name="subService"
+              id="subService"
+              required
+              class="w-full border rounded px-4 py-2"
+            >
+              <option disabled selected>Select a main service first</option>
+            </select>
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Preferred Date</label>
+            <input
+              type="date"
+              name="date"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+          </div>
+          <div>
+            <label class="block mb-2 font-medium">Preferred Time</label>
+            <input
+              type="time"
+              name="time"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
+            >
+              Book Now
+            </button>
+          </div>
+        </form>
+        <!-- This will hold the PayPal button (initially hidden) -->
+        <div id="paypal-button-container" class="mt-6 hidden"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 mt-16 shadow-inner">
+      <p class="text-gray-500 text-sm">
+        &copy; 2025 PawPalace. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Chatbot -->
+    <button id="chatbotToggle" class="chatbot-toggle">💬</button>
+
+    <div class="chatbot-container" id="chatbot">
+      <div class="chatbot-header">PawPal Bot</div>
+      <div class="chatbot-messages" id="chatMessages"></div>
+      <div class="chatbot-input">
+        <input type="text" id="chatInput" placeholder="Type your message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Sub-Service Logic -->
+    <script>
+      const subServiceMap = {
+        "Dog Walking": [
+          "Daily Dog Walks",
+          "Weekend Walk Plans",
+          "Puppy Walks",
+          "Senior Dog Walks",
+          "Adventure Walks",
+          "Group Walks",
+          "Late-Night Walks",
+          "Custom Walk Plans",
+        ],
+        "Pet Training": [
+          "Puppy Basics",
+          "Obedience Training",
+          "Leash Training",
+          "Potty Training",
+          "Behaviour Correction",
+          "Socialization Sessions",
+          "Advanced Commands",
+          "Custom Training Plans",
+        ],
+        Grooming: [
+          "Full Grooming",
+          "Paw Spa",
+          "Bath & Brush",
+          "Nail Trimming",
+          "Ear Cleaning",
+          "De-shedding Treatment",
+          "Teeth Brushing",
+          "Paw & Pad Care",
+        ],
+        "Pet Boarding": [
+          "Overnight Pet Boarding",
+          "Holiday Boarding",
+          "Weekend Stays",
+          "Long-Term Boarding",
+          "Private Suite Boarding",
+          "Play & Stay",
+          "Boarding with Daily Walks",
+          "Home-Style Boarding",
+        ],
+        Veterinary: [
+          "General Health Check-up",
+          "Vaccinations",
+          "Deworming & Parasite Control",
+          "Emergency Care",
+          "Diagnostic Testing",
+          "Spaying & Neutering",
+          "Dental Care",
+          "Senior Pet Care",
+        ],
+        "Pet Sitting": [
+          "In-Home Pet Sitting",
+          "Drop-In Visits",
+          "Overnight Sitting",
+          "Weekend Sitting",
+          "Senior Pet Sitting",
+          "Puppy Sitting",
+          "Multiple Pet Care",
+          "Daily Updates",
+        ],
+      };
+
+      const mainService = document.getElementById("mainService");
+      const subService = document.getElementById("subService");
+
+      mainService.addEventListener("change", function () {
+        const selected = this.value;
+        const options = subServiceMap[selected] || [];
+        subService.innerHTML = options.length
+          ? options
+              .map((opt) => `<option value="${opt}">${opt}</option>`)
+              .join("")
+          : `<option disabled selected>No sub-services available</option>`;
+      });
+    </script>
+
+    <!-- Load PayPal SDK (Sandbox for demo) -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+
+<script>
+  const bookingForm = document.getElementById('bookingForm');
+  const paypalContainer = document.getElementById('paypal-button-container');
+
+  bookingForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Optional: Add validation or save booking data here
+
+    // Show the PayPal button
+    paypalContainer.classList.remove('hidden');
+
+    // Prevent re-rendering multiple buttons
+    if (!paypalContainer.hasChildNodes()) {
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '10.00' // Demo price
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Payment completed by ' + details.payer.name.given_name + ' (Demo)');
+            window.location.href = 'thankyou.html';
+          });
+        }
+      }).render('#paypal-button-container');
     }
-  </style>
-</head>
+  });
+</script>
 
-<body class="bg-blue-50 text-gray-800">
-  <!-- Navbar -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
-      <nav class="space-x-6">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="services.html" class="hover:text-blue-600">Services</a>
-        <a href="booking.html" class="text-blue-600 font-semibold">Book Now</a>
-        <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
-        <a href="login.html" class="hover:text-blue-600">User</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="p-6 max-w-5xl mx-auto">
-    <h2 class="text-2xl font-bold mb-4">Upcoming Pet Service Bookings</h2>
-    <div class="overflow-x-auto rounded-xl shadow-lg">
-      <table class="w-full table-auto border-collapse text-left bg-white">
-        <thead class="bg-blue-100 text-gray-700">
-          <tr>
-            <th class="py-3 px-4">Pet Name</th>
-            <th class="py-3 px-4">Owner</th>
-            <th class="py-3 px-4">Service</th>
-            <th class="py-3 px-4">Sub-Service</th>
-            <th class="py-3 px-4">Date</th>
-            <th class="py-3 px-4">Time</th>
-            <th class="py-3 px-4">Email</th>
-          </tr>
-        </thead>
-        <tbody id="bookingTable" class="text-gray-800">
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Booking Form -->
-  <section class="py-16">
-    <div class="container mx-auto px-4 max-w-2xl bg-white rounded-xl shadow p-8">
-      <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">
-        Book a Pet Service
-      </h2>
-      <form class="space-y-6" id="bookingForm">
-        <div>
-          <label class="block mb-2 font-medium">Pet Name</label>
-          <input type="text" name="petName" placeholder="Pet's Name" required class="w-full border rounded px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Owner Name</label>
-          <input type="text" name="ownerName" placeholder="Your Name" required class="w-full border rounded px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Email Address</label>
-          <input type="email" name="contact" placeholder="john@example.com" required class="w-full border rounded px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Select Service</label>
-          <select name="service" id="mainService" required class="w-full border rounded px-4 py-2">
-            <option disabled selected>Choose a service</option>
-            <option value="Dog Walking">Dog Walking</option>
-            <option value="Pet Training">Pet Training</option>
-            <option value="Grooming">Grooming</option>
-            <option value="Pet Boarding">Pet Boarding</option>
-            <option value="Veterinary">Veterinary</option>
-            <option value="Pet Sitting">Pet Sitting</option>
-          </select>
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Sub-Service</label>
-          <select name="subService" id="subService" required class="w-full border rounded px-4 py-2">
-            <option disabled selected>Select a main service first</option>
-          </select>
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Preferred Date</label>
-          <input type="date" name="date" required class="w-full border rounded px-4 py-2" />
-        </div>
-        <div>
-          <label class="block mb-2 font-medium">Preferred Time</label>
-          <input type="time" name="time" required class="w-full border rounded px-4 py-2" />
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
-            Book Now
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white text-center py-6 mt-16 shadow-inner">
-    <p class="text-gray-500 text-sm">
-      &copy; 2025 PawPalace. All rights reserved.
-    </p>
-  </footer>
-
-  <!-- Chatbot -->
-  <button id="chatbotToggle" class="chatbot-toggle">💬</button>
-
-  <div class="chatbot-container" id="chatbot">
-    <div class="chatbot-header">PawPal Bot</div>
-    <div class="chatbot-messages" id="chatMessages"></div>
-    <div class="chatbot-input">
-      <input type="text" id="chatInput" placeholder="Type your message..." />
-      <button id="sendBtn">Send</button>
-    </div>
-  </div>
-
-  <!-- Dynamic Sub-Service Logic -->
-  <script>
-    const subServiceMap = {
-      "Dog Walking": [
-        "Daily Dog Walks",
-        "Weekend Walk Plans",
-        "Puppy Walks",
-        "Senior Dog Walks",
-        "Adventure Walks",
-        "Group Walks",
-        "Late-Night Walks",
-        "Custom Walk Plans"
-      ],
-      "Pet Training": [
-        "Puppy Basics",
-        "Obedience Training",
-        "Leash Training",
-        "Potty Training",
-        "Behaviour Correction",
-        "Socialization Sessions",
-        "Advanced Commands",
-        "Custom Training Plans"
-      ],
-      "Grooming": [
-        "Full Grooming",
-        "Paw Spa",
-        "Bath & Brush",
-        "Nail Trimming",
-        "Ear Cleaning",
-        "De-shedding Treatment",
-        "Teeth Brushing",
-        "Paw & Pad Care"
-      ],
-      "Pet Boarding": [
-        "Overnight Pet Boarding",
-        "Holiday Boarding",
-        "Weekend Stays",
-        "Long-Term Boarding",
-        "Private Suite Boarding",
-        "Play & Stay",
-        "Boarding with Daily Walks",
-        "Home-Style Boarding"
-      ],
-      "Veterinary": [
-        "General Health Check-up",
-        "Vaccinations",
-        "Deworming & Parasite Control",
-        "Emergency Care",
-        "Diagnostic Testing",
-        "Spaying & Neutering",
-        "Dental Care",
-        "Senior Pet Care"
-      ],
-      "Pet Sitting": [
-        "In-Home Pet Sitting",
-        "Drop-In Visits",
-        "Overnight Sitting",
-        "Weekend Sitting",
-        "Senior Pet Sitting",
-        "Puppy Sitting",
-        "Multiple Pet Care",
-        "Daily Updates"
-      ]
-    };
-
-    const mainService = document.getElementById("mainService");
-    const subService = document.getElementById("subService");
-
-    mainService.addEventListener("change", function () {
-      const selected = this.value;
-      const options = subServiceMap[selected] || [];
-      subService.innerHTML = options.length
-        ? options.map(opt => `<option value="${opt}">${opt}</option>`).join("")
-        : `<option disabled selected>No sub-services available</option>`;
-    });
-  </script>
-
-  <!-- Scripts -->
-  <script src="js/chatbot.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/bookingTable.js"></script>
-  <script src="js/booking.js"></script>
-  <script src="js/analytics.js"></script>
-  <script src="js/services.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bookingTable.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/services.js"></script>
+  </body>
 </html>
