@@ -105,54 +105,77 @@
     </div>
 
     <script>
-      const loginTab = document.getElementById("loginTab");
-      const signupTab = document.getElementById("signupTab");
-      const loginForm = document.getElementById("loginForm");
-      const signupForm = document.getElementById("signupForm");
-
-      loginTab.addEventListener("click", () => {
-        loginForm.classList.remove("hidden");
-        signupForm.classList.add("hidden");
-        loginTab.classList.add(
-          "border-b-2",
-          "border-blue-500",
-          "text-blue-600"
-        );
-        signupTab.classList.remove(
-          "border-b-2",
-          "border-blue-500",
-          "text-blue-600"
-        );
-        signupTab.classList.add("text-gray-500");
+      document.getElementById("signupForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+      
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+      
+        fetch("php/signup.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `full_name=${name}&email=${email}&password=${password}`,
+        })
+          .then((res) => res.text())
+          .then((data) => {
+            if (data === "success") {
+              alert("Signup successful! You can now login.");
+              document.getElementById("loginTab").click(); // switch to login form
+            } else {
+              alert("Signup failed. Email might already exist.");
+            }
+          });
       });
-
-      signupTab.addEventListener("click", () => {
-        signupForm.classList.remove("hidden");
-        loginForm.classList.add("hidden");
-        signupTab.classList.add(
-          "border-b-2",
-          "border-blue-500",
-          "text-blue-600"
-        );
-        loginTab.classList.remove(
-          "border-b-2",
-          "border-blue-500",
-          "text-blue-600"
-        );
-        loginTab.classList.add("text-gray-500");
+      
+      document.getElementById("loginForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+      
+        const email = this.querySelector('input[type="email"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+      
+        fetch("php/login.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `email=${email}&password=${password}`,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status === "success") {
+              localStorage.setItem("isLoggedIn", "true");
+              localStorage.setItem("userName", data.name);
+              window.location.href = "index.html";
+            } else {
+              alert("Login failed. Please check your credentials.");
+            }
+          });
       });
-
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const email = this.querySelector('input[type="email"]').value;
-          const name = "User"; // You can set a default or get from a server
-
-          localStorage.setItem("isLoggedIn", "true");
-          localStorage.setItem("userName", name); // Save user name
-          window.location.href = "index.html"; // Redirect to homepage
-        });
-    </script>
+      </script>
+      
+       <!-- Footer -->
+       <footer class="bg-white text-center py-6 mt-16 shadow-inner">
+        <p class="text-gray-500 text-sm">
+          &copy; 2025 PawPalace. All rights reserved.
+        </p>
+      </footer>
+  
+      <!-- Chatbot Button -->
+      <button id="chatbotToggle" class="chatbot-toggle">💬</button>
+  
+      <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">PawPal Bot</div>
+        <div class="chatbot-messages" id="chatMessages"></div>
+        <div class="chatbot-input">
+          <input type="text" id="chatInput" placeholder="Type your message..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+  
+      <script src="js/chatbot.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/bookingTable.js"></script>
+      <script src="js/analytics.js"></script>
+      <script src="js/booking.js"></script>
+      <script src="js/services.js"></script>
   </body>
 </html>
