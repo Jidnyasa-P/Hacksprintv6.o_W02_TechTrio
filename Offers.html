@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Offers | PawPalace</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #fefefe;
+        margin: 0;
+        padding: 0;
+        cursor: url("images/cursor.cur"), auto;
+      }
+
+      .offer-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        text-align: center;
+      }
+
+      .offer-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .offer-card img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+      }
+
+      .offer-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .offer-card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body class="bg-blue-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <img src="images/logo.png" alt="Logo" class="w-20 h-20 rounded-full" />
+          <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
+        </div>
+        <nav class="space-x-6">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="services.html" class="hover:text-blue-600">Services</a>
+          <a href="vets.html" class="hover:text-blue-600">Vets</a>
+          <a href="shop.html" class="hover:text-blue-600">Shop</a>
+          <a href="cart.html" class="hover:text-blue-600 relative">
+            🛒 Cart
+            <span id="cart-count" class="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full absolute -top-2 -right-3">0</span>
+          </a>
+          <a href="booking.html" class="hover:text-blue-600">Book Now</a>
+          <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
+          <a href="login.html" class="hover:text-blue-600">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Membership Offers Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">
+          Exclusive Membership Offers
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Loyal Paw Prints -->
+          <div class="offer-card">
+            <img src="images/ribbon.png" alt="Ribbon Badge" />
+            <h3>Loyal Paw Prints</h3>
+            <p>
+              Collect a stamp for each service you book. Collect 10 stamps and
+              unlock a free surprise treat!
+            </p>
+            <a href="dashboard.html">
+                <button onclick="saveMembershipOffer('user123', 'Adoption Heroes')">Join Now</button>
+                Join Now
+            </a> 
+          </div>
+
+          <!-- Adoption Heroes Special -->
+          <div class="offer-card">
+            <img src="images/shield2.png" alt="Shield Badge" />
+            <h3>Adoption Heroes Special</h3>
+            <p>
+              Have an adopted pet? Enjoy 15% off on all bookings — because heroes
+              deserve perks.
+            </p>
+            <a href="dashboard.html">
+                <button onclick="saveMembershipOffer('user123', 'Adoption Heroes')">Join Now</button>
+                Join Now
+            </a> 
+          </div>
+
+          <!-- Senior Paw Perks -->
+          <div class="offer-card">
+            <img src="images/crown.png" alt="Senior Paw Badge" />
+            <h3>Senior Paw Perks</h3>
+            <p>
+              Pets above 8 years get access to special care discounts and priority
+              vet checkups.
+            </p>
+            <a href="dashboard.html">
+                <button onclick="saveMembershipOffer('user123', 'Adoption Heroes')">Join Now</button>
+                Join Now
+            </a> 
+          </div>
+
+          <!-- Book 10, Get 10% -->
+          <div class="offer-card">
+            <img src="images/popper.png" alt="Discount Badge" />
+            <h3>Book 10, Get 10% Off</h3>
+            <p>
+              Book 10 services and receive 10% off your next booking
+              automatically!
+            </p>
+            <a href="dashboard.html">
+                  <button onclick="saveMembershipOffer('user123', 'Adoption Heroes')">Join Now</button>
+                  Join Now
+            </a> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  
+  <script src="firebase-config.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 mt-16 shadow-inner">
+      <p class="text-gray-500 text-sm">
+        &copy; 2025 PawPalace. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
