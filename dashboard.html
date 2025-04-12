@@ -171,6 +171,34 @@
       }
     </script>
 
+<div id="membershipBadge" class="text-center mt-10"></div>
+<script>
+ function showMembership(userId) {
+  db.collection("memberships").doc(userId).get().then((doc) => {
+    if (doc.exists) {
+      const offer = doc.data().offer;
+      let imgSrc = "";
+
+      if (offer === "Loyal Paw Prints") imgSrc = "images/ribbon.png";
+      else if (offer === "Adoption Heroes") imgSrc = "images/shield2.png";
+      else if (offer === "Senior Paw Perks") imgSrc = "images/crown.png";
+      else if (offer === "Book 10, Get 10% Off") imgSrc = "images/popper.png";
+
+      document.getElementById("membershipBadge").innerHTML = `
+        <h2 class="text-2xl font-bold text-blue-600">Your Membership</h2>
+        <img src="${imgSrc}" alt="${offer}" class="w-24 h-24 mx-auto mt-4" />
+        <p class="mt-2 text-lg">${offer}</p>
+      `;
+    } else {
+      document.getElementById("membershipBadge").innerText = "No membership joined.";
+    }
+  });
+ }
+ </script>
+
+// Replace 'user123' with actual user ID later if using Firebase Auth
+showMembership("user123"); 
+
     <script src="js/chatbot.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bookingTable.js"></script>
