@@ -10,18 +10,28 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        cursor: url("images/cursor.cur"), auto;
+      }
+    </style>
   </head>
   <body class="bg-blue-50 text-gray-800">
     <!-- Header -->
-    <header class="bg-white shadow sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
       <div
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
               <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
+      <div class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="Logo" class="w-20 h-20 rounded-full" />
+        <h1 class="text-2xl font-bold text-blue-600">PawPalace</h1>
+      </div>
         <nav class="space-x-6">
           <a href="index.html" class="hover:text-blue-600">Home</a>
           <a href="services.html" class="hover:text-blue-600">Services</a>
-          <a href="certified-vets.html" class="hover:text-blue-600">Vets</a>
+          <a href="vets.html" class="hover:text-blue-600">Vets</a>
           <a href="shop.html" class="hover:text-blue-600">Shop</a>
           <a href="cart.html" class="hover:text-blue-600 relative">
             🛒 Cart
@@ -32,6 +42,7 @@
           <a href="booking.html" class="hover:text-blue-600">Book Now</a>
           <a href="dashboard.html" class="hover:text-blue-600">Dashboard</a>
           <a href="login.html" class="hover:text-blue-600">Login</a>
+          <a href="Offers.html" class="hover:text-blue-600">Offers</a>
         </nav>
       </div>
     </header>
